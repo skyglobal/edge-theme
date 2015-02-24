@@ -1,0 +1,23 @@
+{{!< default}}
+{{#foreach posts}}
+<article>
+    <header class="post-header">
+        <h1 class="post-title">
+            {{title}}
+        </h1>
+    </header>
+    <aside>
+        By {{author}},
+        <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY HH:mm"}}</time>
+    <div class="tags">
+      {{tags separator=" "}}
+    </div>
+    </aside>
+    <div class="post-content">
+        {{content}}
+    </div>
+    <footer class="post-meta">
+        {{#if author.image}}<img class="author-thumb" src="{{author.image}}" alt="Author image" nopin="nopin" />{{/if}}
+    </footer>
+</article>
+{{/foreach}}
