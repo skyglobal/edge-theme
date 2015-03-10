@@ -1,0 +1,19 @@
+{
+  "name": "edge-theme",
+  "version": "0.0.0",
+  "authors": [
+    "George Richmond <george.richmond@bskyb.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bskyb-core": "~0.0.4"
+  }
+}

@@ -5,17 +5,17 @@ var reload      = browserSync.reload;
 
 
 
-gulp.task('default', function() {
+gulp.task('default', function () {
   // place code for your default task here
 });
 
 
-gulp.task('watch', ['sass'], function() {
-	   //  browserSync({
-    //     proxy: "yourlocal.dev",
-    // });
+gulp.task('watch', ['sass'], function () {
+     browserSync({
+     proxy: "localhost:2368",
+        });
 
-	    gulp.watch("./src/style/*.scss", ['sass']);
+    gulp.watch("./src/style/*.scss", ['sass']);
 
 });
  
@@ -23,5 +23,5 @@ gulp.task('sass', function () {
     return gulp.src('./src/style/*.scss')
         .pipe(sass())
         .pipe(gulp.dest('./assets/css'))
-        // .pipe(reload({stream: true}));
+        .pipe(reload({stream: true}));
 });
